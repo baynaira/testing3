@@ -1,15 +1,19 @@
 <!-- members/templates/members/index.html -->
+{% extends "members/base.html" %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    {% block title %} {% endblock %} 
     <title>Home Page</title>
 </head>
 <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+{% block content %}
 <body>
-   <h2> hii </h2>
+   <h2> Welcome to the about section </h2>
 </body>
 </html>
+{% endblock %}

@@ -1,17 +1,21 @@
 <!-- members/templates/members/index.html -->
+{% extends "members/base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    
+ 
+   
+{% block title %} {% endblock %} 
 </head>
 <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+{% block content %}
 <body>
     <h1>Welcome to the Home Page</h1>
     <p>This is a simple template for the root URL.</p>
     <a href="{% url 'members:people' %}">Go to people Page</a>
 </body>
 </html>
+{% endblock %}
